@@ -175,7 +175,6 @@ a:hover {
 
 .navbar .dropdown > a {
   font-weight: bold;
-  color: var(--highlight);
   cursor: pointer;
   position: relative;
 }
@@ -233,16 +232,17 @@ a:hover {
 }
 
 .profile-img {
-    width: 150px; /* Adjust as needed */
-    height: 150px;
+    width: 160px;
+    height: 160px;
     border-radius: 50%;
     object-fit: cover;
-    border: 3px solid #ffd700; /* Subtle yellow border */
-    box-shadow: 0 0 15px rgba(255, 215, 0, 0.6); /* Soft yellow glow */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid #f1c40f; /* Subtle gold border */
+    box-shadow: 0 0 8px rgba(241, 196, 15, 0.4); /* Softer glow */
     display: block;
     margin: 2rem auto;
+    background-color: #111; /* Match site background to avoid edge glow */
 }
+
 
 .profile-img:hover {
     transform: scale(1.05);
