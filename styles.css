@@ -231,3 +231,20 @@ a:hover {
   border-left: 4px solid var(--highlight);
   padding-left: 0.75rem;
 }
+
+.profile-img {
+    width: 150px; /* Adjust as needed */
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #ffd700; /* Subtle yellow border */
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.6); /* Soft yellow glow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: block;
+    margin: 2rem auto;
+}
+
+.profile-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(255, 215, 0, 0.9);
+}
