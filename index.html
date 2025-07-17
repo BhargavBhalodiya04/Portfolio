@@ -1,94 +1,211 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bhargav Bhalodiya | Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bhargav Bhalodiya | Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="header.css" />
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
-  <header>
-    <nav>
-      <h1>Bhargav Bhalodiya</h1>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#certifications">Certifications</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+    <header class="hero-header">
+        <nav class="navbar">
+            <div class="nav__logo">
+                <a href="#">Bhargav Bhalodiya</a>
+            </div>
+            <ul class="nav__links" id="nav-links">
+                <li><a href="#about">About</a></li>
+                <li class="dropdown">
+                    <a href="#projects">Projects</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#ai-project">AI Attendance</a></li>
+                        <li><a href="#event-project">Event Manager</a></li>
+                        <li><a href="#feeder-project">Animal Feeder</a></li>
+                    </ul>
+                </li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav__menu__btn" id="menu-btn">
+                <i class="ri-menu-line"></i>
+            </div>
+        </nav>
 
-  <section id="home" class="hero">
-    <img src="assets/images/myphoto.jpg" alt="Bhargav's Photo" class="profile-img" />
-    <h2>Hello, I'm Bhargav Bhalodiya</h2>
-    <p>ICT Student | Python & AWS Enthusiast | Developer & Innovator</p>
-    <a href="assets/Bhargav-Bhalodiya.pdf" target="_blank" class="btn">Download Resume</a>
-  </section>
+        <div class="hero-intro container">
+            <div class="hero-text">
+                <h1>Hi, I'm <span class="highlight">Bhargav Bhalodiya</span></h1>
+                <p>Full-Stack Developer | Cloud & DevOps Enthusiast | Python + AWS Expert</p>
+            </div>
+            <div class="hero-img">
+                <img src="assets/profile.jpg" alt="Profile Picture">
+            </div>
+        </div>
+    </header>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>I’m currently pursuing a B.Tech in ICT at Marwadi University. I have hands-on experience with cloud computing, AI, and software development. I've filed patents, built innovative projects, and actively participate in tech communities.</p>
-  </section>
+    <section id="about" class="section container">
+        <h2>About Me</h2>
+        <p>
+            I’m currently pursuing a B.Tech in ICT at Marwadi University. I’ve built AI-powered tools, deployed
+            full-stack apps, and contributed to smart hardware solutions. I’m passionate about solving real-world
+            problems using Python, AWS, Docker, and DevOps workflows. I'm a quick learner and enjoy collaborating on
+            scalable cloud-native apps.
+        </p>
+    </section>
 
-  <section id="skills">
-    <h2>Skills & Technologies</h2>
-    <ul class="skill-list">
-      <li>Python</li>
-      <li>SQL</li>
-      <li>Java (Beginner)</li>
-      <li>YAML</li>
-      <li>AWS</li>
-      <li>Docker</li>
-      <li>Kubernetes</li>
-      <li>Jenkins</li>
-      <li>Git/GitHub</li>
-      <li>Linux (Admin)</li>
-    </ul>
-  </section>
+    <section id="skills" class="section container">
+        <h2>My Skills</h2>
+        <div class="skills-grid">
+            <div class="skill">
+                <p>Python</p>
+                <div class="skill-bar">
+                    <div class="skill-fill" style="width: 90%;"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <p>AWS</p>
+                <div class="skill-bar">
+                    <div class="skill-fill" style="width: 85%;"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <p>HTML/CSS</p>
+                <div class="skill-bar">
+                    <div class="skill-fill" style="width: 90%;"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <p>SQL</p>
+                <div class="skill-bar">
+                    <div class="skill-fill" style="width: 80%;"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <p>Docker</p>
+                <div class="skill-bar">
+                    <div class="skill-fill" style="width: 75%;"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <p>Kubernetes</p>
+                <div class="skill-bar">
+                    <div class="skill-fill" style="width: 65%;"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <p>Linux (Admin)</p>
+                <div class="skill-bar">
+                    <div class="skill-fill" style="width: 80%;"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <p>Java (Beginner)</p>
+                <div class="skill-bar">
+                    <div class="skill-fill" style="width: 50%;"></div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <section id="projects">
-    <h2>Projects</h2>
+    <section class="project-section">
+        <h2>Projects</h2>
 
-    <div class="project">
-      <h3><a href="https://github.com/BhargavBhalodiya04/AI-Smart-Attendance-System" target="_blank">AI Smart Attendance System</a></h3>
-      <p>Automated student attendance system using face recognition (Python, OpenCV, MTCNN).</p>
+        <div class="project">
+            <div class="project-header">
+                <h3>Smart Attendance System</h3>
+                <a href="#"><i class="fas fa-external-link-alt"></i> github repo</a>
+            </div>
+            <ul>
+                <li><strong>Developed an AI-based Smart Attendance System for automatic face recognition and attendance
+                        marking</strong></li>
+                <li>Built an AI-powered Smart Attendance System that automates student attendance in classrooms using
+                    face recognition technology.</li>
+                <li>Technology Used: Python, OpenCV, MTCNN</li>
+            </ul>
+        </div>
+
+        <div class="project">
+            <div class="project-header">
+                <h3>Event Management</h3>
+                <a href="#"><i class="fas fa-external-link-alt"></i> github repo</a>
+            </div>
+            <ul>
+                <li><strong>Developed interactive Event Management System.</strong></li>
+                <li>Faculty can create, update, and delete events. Built with HTML/CSS for frontend and SQL for backend.
+                </li>
+                <li>Technology Used: C#, SQL, XML, HTML, CSS</li>
+            </ul>
+        </div>
+
+        <div class="project">
+            <div class="project-header">
+                <h3>Automatic Animal Feeder</h3>
+                <a href="#"><i class="fas fa-external-link-alt"></i> github repo</a>
+            </div>
+            <ul>
+                <li><strong>Built a hardware-based Smart Attendance System for automatic attendance marking using
+                        Arduino IDE.</strong></li>
+                <li>Uses ultrasonic sensors for food detection and automated feeding using Arduino logic and custom
+                    schedules.</li>
+                <li>Technology and Hardware Used: C++, Arduino IDE, UltraSonic Sensor</li>
+            </ul>
+        </div>
+
+<div class="project patent-file">
+    <div class="project-header">
+        <h3>Patent File <span class="year">2024</span></h3>
     </div>
-
-    <div class="project">
-      <h3><a href="https://github.com/BhargavBhalodiya04/Event-Management-System" target="_blank">Event Management System</a></h3>
-      <p>Faculty event organizer built using C#, SQL, XML, HTML/CSS for managing events efficiently.</p>
-    </div>
-
-    <div class="project">
-      <h3><a href="https://github.com/BhargavBhalodiya04/Automatic-Animal-Feeder" target="_blank">Automatic Animal Feeder</a></h3>
-      <p>Hardware-based smart feeding system using Arduino and ultrasonic sensors.</p>
-    </div>
-  </section>
-
-  <section id="certifications">
-    <h2>Certifications</h2>
     <ul>
-      <li>Cloud Foundations – Basics of cloud services & architecture</li>
-      <li>Linux Administration – Advanced Linux commands & operations</li>
-      <li>Introduction to Cyber Security – Cyber fraud prevention & fundamentals</li>
+        <li>
+            <strong><B>Smart Vehicle Roof Rainwater Harvesting and Greywater Recycling System:</B></strong>
+            <br>
+            An integrated system designed to collect, treat, and reuse rainwater and greywater in buildings using smart IoT sensors, AI-based optimization, and modular design. It reduces water wastage and enhances sustainability for residential and commercial use.
+        </li>
+        <li>
+            <strong><B>Green Roof with Integrated Vertical Farming System:</B></strong>
+            <br>
+            Combines green roof infrastructure with modular vertical farming to promote urban agriculture, improve thermal insulation, and enable rainwater harvesting. The system uses renewable energy and smart monitoring to ensure eco-efficiency in food production and resource use.
+        </li>
     </ul>
-  </section>
+</div>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:bhargavpatel1513@gmail.com">bhargavpatel1513@gmail.com</a></p>
-    <p>Phone: <a href="tel:+918490839630">+91 84908 39630</a></p>
-    <p>GitHub: <a href="https://github.com/BhargavBhalodiya04" target="_blank">BhargavBhalodiya04</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/bhargavbhalodiya/" target="_blank">bhargavbhalodiya</a></p>
-  </section>
+    </section>
 
-  <footer>
-    <p>&copy; 2025 Bhargav Bhalodiya. All rights reserved.</p>
-  </footer>
 
-  <script src="script.js"></script>
+    </section>
+
+
+    <section>
+        <div class="resume-center">
+            <a href="assets/Bhargav-Bhalodiya.pdf" class="btn">Download Resume</a>
+        </div>
+    </section>
+
+    <section id="contact" class="section container">
+        <h2>Contact</h2>
+        <div class="contact-info">
+            <span><i class="fas fa-envelope"></i> bhargavpatel1513@gmail.com</span>
+            <span><i class="fas fa-phone"></i> +91 84908 39630</span>
+            <span><i class="fab fa-github"></i> <a href="https://github.com/BhargavBhalodiya04"
+                    target="_blank">BhargavBhalodiya04</a></span>
+            <span><i class="fab fa-linkedin"></i> <a href="https://linkedin.com/in/bhargavbhalodiya"
+                    target="_blank">bhargavbhalodiya</a></span>
+        </div>
+
+    </section>
+
+    <footer>
+        <div class="container">
+            <p style="color: #aaa; text-align: center;">&copy; 2025 Bhargav Bhalodiya. Passionate about cloud,
+                automation, and scalable solutions.</p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
 </body>
+
 </html>
