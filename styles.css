@@ -2,8 +2,12 @@
   --bg-dark: #111;
   --text-light: #f1f1f1;
   --highlight: #ffd700;
-  --primary: #222;
-  --accent: #555;
+  --primary: #1e1e1e;
+  --accent: #4da8ff;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -13,6 +17,7 @@ body {
   color: var(--text-light);
 }
 
+/* Generic Section Styling */
 .section {
   padding: 4rem 1rem;
   max-width: 1000px;
@@ -26,14 +31,15 @@ h2 {
 }
 
 a {
-  color: #4da8ff;
+  color: var(--accent);
   text-decoration: none;
 }
+
 a:hover {
   text-decoration: underline;
 }
 
-/* Skills Section */
+/* ===================== Skills Section ===================== */
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -42,35 +48,101 @@ a:hover {
 
 .skill p {
   margin: 0 0 0.5rem;
+  font-weight: 500;
 }
 
 .skill-bar {
   background-color: #333;
   border-radius: 10px;
   height: 10px;
+  overflow: hidden;
 }
 
 .skill-fill {
   background-color: var(--highlight);
   height: 100%;
   border-radius: 10px;
+  transition: width 0.4s ease-in-out;
 }
 
-/* Project Cards */
+/* ===================== Project Section ===================== */
+.project-section {
+  max-width: 900px;
+  margin: auto;
+}
+
+.project-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid #444;
+  padding-bottom: 0.5rem;
+}
+
+/* Project Card */
 .project {
   background-color: var(--primary);
-  padding: 1rem 1.5rem;
-  margin-bottom: 1.5rem;
+  color: var(--text-light);
+  padding: 1.5rem;
   border-left: 5px solid var(--highlight);
-  border-radius: 8px;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
 }
 
-.project h3 {
-  margin-top: 0;
+.project:hover {
+  transform: translateY(-5px);
+}
+
+/* Project Header */
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.project-header h3 {
   color: var(--highlight);
+  font-size: 1.3rem;
+  margin: 0;
+  font-weight: 600;
 }
 
-/* Contact Info Section */
+.project-header a {
+  color: var(--accent);
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+.project-header a i {
+  margin-right: 0.3rem;
+}
+
+/* Project List */
+.project ul {
+  padding-left: 1.2rem;
+  margin-top: 0.8rem;
+}
+
+.project ul li {
+  margin-bottom: 0.6rem;
+  list-style-type: disc;
+  line-height: 1.6;
+}
+
+.project ul li strong {
+  color: #f5f5f5;
+  font-weight: 600;
+}
+
+.year {
+  font-style: italic;
+  font-size: 0.9rem;
+  color: #aaa;
+  margin-left: 0.5rem;
+}
+
+/* ===================== Contact Info ===================== */
 .contact-info {
   display: flex;
   flex-wrap: wrap;
@@ -88,8 +160,7 @@ a:hover {
 }
 
 .contact-info a {
-  color: #4da8ff;
-  text-decoration: none;
+  color: var(--accent);
   font-weight: 500;
 }
 
@@ -97,115 +168,66 @@ a:hover {
   text-decoration: underline;
 }
 
-/* body {
-  font-family: 'Segoe UI', sans-serif;
-  margin: 0;
-  background-color: #fff;
-  color: #111;
-  padding: 2rem;
-} */
-
-.project-section {
-  max-width: 900px;
-  margin: auto;
+/* ===================== Dropdown Projects Styling ===================== */
+.navbar .dropdown {
+  position: relative;
 }
 
-.project-section h2 {
-  font-size: 1.8rem;
-  margin-bottom: 2rem;
-  border-bottom: 2px solid #ccc;
-  padding-bottom: 0.5rem;
+.navbar .dropdown > a {
+  font-weight: bold;
+  color: var(--highlight);
+  cursor: pointer;
+  position: relative;
 }
 
-.project {
-  margin-bottom: 2rem;
+.navbar .dropdown > a::after {
+  content: " ▼";
+  font-size: 0.7rem;
+  color: #ccc;
+  transition: transform 0.3s ease;
 }
 
-.project-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.navbar .dropdown:hover > a::after {
+  transform: rotate(180deg);
 }
 
-.project-header h3 {
-  font-size: 1.3rem;
-  margin: 0;
+.dropdown-menu {
+  list-style: none;
+  padding: 0.5rem 0;
+  background: #1b1b1b;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 180px;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  display: none;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+  z-index: 999;
 }
 
-.project-header a {
-  text-decoration: none;
-  color: #007bff;
-  font-size: 0.9rem;
+.navbar .dropdown:hover .dropdown-menu {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
 }
 
-.project-header a i {
-  margin-right: 0.3rem;
+.dropdown-menu li {
+  padding: 0.5rem 1rem;
 }
 
-.project ul {
-  margin-top: 0.5rem;
-  padding-left: 1.2rem;
-}
-
-.project ul li {
-  margin-bottom: 0.5rem;
-  line-height: 1.6;
-}
-
-.project ul li strong {
-  color: #000;
-}
-
-.year {
-  font-style: italic;
-  font-weight: 400;
-  font-size: 0.9rem;
-  margin-left: 0.5rem;
-  color: #666;
-}
-
-.project {
-  background-color: #222;
+.dropdown-menu a {
   color: #f1f1f1;
-  padding: 1rem 1.5rem;
-  border-left: 5px solid #ffd700;
-  border-radius: 10px;
-  margin: 1.5rem 0;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-}
-
-.project-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.project-header h3 {
-  color: #ffd700;
-  font-size: 1.2rem;
-  font-weight: 700;
-  margin: 0;
-}
-
-.project-header .year {
-  font-style: italic;
-  font-size: 0.9rem;
-  color: #aaa;
-  font-weight: 400;
-  margin-left: 0.5rem;
-}
-
-.project ul {
-  padding-left: 1.2rem;
-  margin-top: 0.8rem;
-}
-
-.project ul li {
-  margin-bottom: 0.6rem;
-  list-style-type: disc;
-}
-
-.project ul li strong {
   font-weight: 600;
-  color: #ddd;
+  display: block;
+  transition: 0.3s ease;
+}
+
+.dropdown-menu a:hover {
+  background-color: #292929;
+  color: var(--highlight);
+  border-left: 4px solid var(--highlight);
+  padding-left: 0.75rem;
 }

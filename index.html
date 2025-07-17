@@ -5,14 +5,66 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bhargav Bhalodiya | Portfolio</title>
+
+    <!-- Fonts and Styles -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="header.css" />
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .patent-file {
+            background-color: #222;
+            border-left: 5px solid #ffd700;
+            padding: 1rem 1.5rem;
+            border-radius: 10px;
+            color: #f1f1f1;
+            margin: 2rem 0;
+            box-shadow: 0 2px 8px rgba(255, 255, 255, 0.05);
+        }
+
+        .patent-file .project-header h3 {
+            color: #ffd700;
+            font-size: 1.3rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            margin: 0 0 1rem 0;
+        }
+
+        .patent-file .year {
+            font-style: italic;
+            font-size: 0.9rem;
+            color: #bbb;
+            font-weight: 400;
+            margin-left: 0.6rem;
+        }
+
+        .patent-file ul {
+            list-style-type: disc;
+            padding-left: 1.5rem;
+        }
+
+        .patent-file li {
+            margin-bottom: 1rem;
+            line-height: 1.6;
+            color: #ddd;
+        }
+
+        .patent-file li strong {
+            display: block;
+            color: #fff;
+            margin-bottom: 0.3rem;
+        }
+    </style>
 </head>
 
 <body>
+
+    <!-- Header -->
     <header class="hero-header">
         <nav class="navbar">
             <div class="nav__logo">
@@ -21,13 +73,15 @@
             <ul class="nav__links" id="nav-links">
                 <li><a href="#about">About</a></li>
                 <li class="dropdown">
-                    <a href="#projects">Projects</a>
+                    <a href="#projects" class="nav-link">Projects</a>
                     <ul class="dropdown-menu">
                         <li><a href="#ai-project">AI Attendance</a></li>
                         <li><a href="#event-project">Event Manager</a></li>
                         <li><a href="#feeder-project">Animal Feeder</a></li>
+                        <li><a href="#patent-project">Patent File</a></li>
                     </ul>
                 </li>
+
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -47,6 +101,7 @@
         </div>
     </header>
 
+    <!-- About -->
     <section id="about" class="section container">
         <h2>About Me</h2>
         <p>
@@ -57,6 +112,7 @@
         </p>
     </section>
 
+    <!-- Skills -->
     <section id="skills" class="section container">
         <h2>My Skills</h2>
         <div class="skills-grid">
@@ -111,10 +167,11 @@
         </div>
     </section>
 
-    <section class="project-section">
+    <!-- Projects -->
+    <section class="project-section" id="projects">
         <h2>Projects</h2>
 
-        <div class="project">
+        <div class="project" id="ai-project">
             <div class="project-header">
                 <h3>Smart Attendance System</h3>
                 <a href="#"><i class="fas fa-external-link-alt"></i> github repo</a>
@@ -128,7 +185,7 @@
             </ul>
         </div>
 
-        <div class="project">
+        <div class="project" id="event-project">
             <div class="project-header">
                 <h3>Event Management</h3>
                 <a href="#"><i class="fas fa-external-link-alt"></i> github repo</a>
@@ -141,7 +198,7 @@
             </ul>
         </div>
 
-        <div class="project">
+        <div class="project" id="feeder-project">
             <div class="project-header">
                 <h3>Automatic Animal Feeder</h3>
                 <a href="#"><i class="fas fa-external-link-alt"></i> github repo</a>
@@ -155,36 +212,37 @@
             </ul>
         </div>
 
-<div class="project patent-file">
-    <div class="project-header">
-        <h3>Patent File <span class="year">2024</span></h3>
-    </div>
-    <ul>
-        <li>
-            <strong><B>Smart Vehicle Roof Rainwater Harvesting and Greywater Recycling System:</B></strong>
-            <br>
-            An integrated system designed to collect, treat, and reuse rainwater and greywater in buildings using smart IoT sensors, AI-based optimization, and modular design. It reduces water wastage and enhances sustainability for residential and commercial use.
-        </li>
-        <li>
-            <strong><B>Green Roof with Integrated Vertical Farming System:</B></strong>
-            <br>
-            Combines green roof infrastructure with modular vertical farming to promote urban agriculture, improve thermal insulation, and enable rainwater harvesting. The system uses renewable energy and smart monitoring to ensure eco-efficiency in food production and resource use.
-        </li>
-    </ul>
-</div>
-
+        <div class="project patent-file" id="patent-project">
+            <div class="project-header">
+                <h3>Patent File <span class="year">2024</span></h3>
+            </div>
+            <ul>
+                <li>
+                    <strong>Smart Vehicle Roof Rainwater Harvesting and Greywater Recycling System:</strong>
+                    <br>
+                    An integrated system designed to collect, treat, and reuse rainwater and greywater in buildings
+                    using smart IoT sensors, AI-based optimization, and modular design. It reduces water wastage and
+                    enhances sustainability for residential and commercial use.
+                </li>
+                <li>
+                    <strong>Green Roof with Integrated Vertical Farming System:</strong>
+                    <br>
+                    Combines green roof infrastructure with modular vertical farming to promote urban agriculture,
+                    improve thermal insulation, and enable rainwater harvesting. The system uses renewable energy and
+                    smart monitoring to ensure eco-efficiency in food production and resource use.
+                </li>
+            </ul>
+        </div>
     </section>
 
-
-    </section>
-
-
+    <!-- Resume -->
     <section>
         <div class="resume-center">
             <a href="assets/Bhargav-Bhalodiya.pdf" class="btn">Download Resume</a>
         </div>
     </section>
 
+    <!-- Contact -->
     <section id="contact" class="section container">
         <h2>Contact</h2>
         <div class="contact-info">
@@ -195,9 +253,9 @@
             <span><i class="fab fa-linkedin"></i> <a href="https://linkedin.com/in/bhargavbhalodiya"
                     target="_blank">bhargavbhalodiya</a></span>
         </div>
-
     </section>
 
+    <!-- Footer -->
     <footer>
         <div class="container">
             <p style="color: #aaa; text-align: center;">&copy; 2025 Bhargav Bhalodiya. Passionate about cloud,
@@ -205,6 +263,7 @@
         </div>
     </footer>
 
+    <!-- Scripts -->
     <script src="main.js"></script>
 </body>
 
